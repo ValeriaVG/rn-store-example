@@ -1,0 +1,54 @@
+c9d977b976786552d5fa0b9d6ab6f276
+"use strict";
+
+var __importDefault = this && this.__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
+};
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var react_1 = __importDefault(require("react"));
+
+var react_native_1 = require("react-native");
+
+var ProductCard_1 = __importDefault(require("./ProductCard"));
+
+function ProductsScreen() {
+  var items = [{
+    id: '1438249',
+    article: '1438249',
+    image: 'https://www.ahlsell.se/external-assets/STEP_IB_BILD/JPEGlarge800_800/std.lang.all/52/79/27145279.jpg?preset=large',
+    title: 'Kopplingsdosa U-56 Exxactvit Schneider',
+    description: 'Kapslad kopplingsdosa U-56 för utanpåliggande montage. Skruvfastsatt lock. Har totalt tio nipplar för kabelingångar samt två utbrytningar i botten för kabelingång bakifrån.',
+    price: 10,
+    parameters: [{
+      label: 'Bredd',
+      value: '87 mm'
+    }, {
+      label: 'Längd',
+      value: '87 mm'
+    }, {
+      label: 'Djup',
+      value: '39 mm'
+    }]
+  }];
+  return React.createElement(react_native_1.SafeAreaView, null, React.createElement(react_native_1.FlatList, {
+    data: items,
+    renderItem: function renderItem(_ref) {
+      var item = _ref.item;
+      return React.createElement(ProductCard_1.default, {
+        product: item
+      });
+    },
+    keyExtractor: function keyExtractor(item) {
+      return item.id;
+    }
+  }));
+}
+
+exports.default = ProductsScreen;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy92YWxlcmlhdmlhbmFndXNtYW8vZ2l0L3N0b3JlL3NyYy9tb2R1bGVzL3Byb2R1Y3RzL1Byb2R1Y3RzU2NyZWVuLnRzeCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7QUFBQSxJQUFBLE9BQUEsR0FBQSxlQUFBLENBQUEsT0FBQSxDQUFBLE9BQUEsQ0FBQSxDQUFBOztBQUNBLElBQUEsY0FBQSxHQUFBLE9BQUEsQ0FBQSxjQUFBLENBQUE7O0FBQ0EsSUFBQSxhQUFBLEdBQUEsZUFBQSxDQUFBLE9BQUEsQ0FBQSxlQUFBLENBQUEsQ0FBQTs7QUFFQSxTQUF3QixjQUF4QixHQUFzQztBQUNwQyxNQUFNLEtBQUssR0FBbUIsQ0FDNUI7QUFDRSxJQUFBLEVBQUUsRUFBRSxTQUROO0FBRUUsSUFBQSxPQUFPLEVBQUUsU0FGWDtBQUdFLElBQUEsS0FBSyxFQUNILG1IQUpKO0FBS0UsSUFBQSxLQUFLLEVBQUUsd0NBTFQ7QUFNRSxJQUFBLFdBQVcsRUFDVCw4S0FQSjtBQVFFLElBQUEsS0FBSyxFQUFFLEVBUlQ7QUFTRSxJQUFBLFVBQVUsRUFBRSxDQUNWO0FBQUMsTUFBQSxLQUFLLEVBQUUsT0FBUjtBQUFpQixNQUFBLEtBQUssRUFBRTtBQUF4QixLQURVLEVBRVY7QUFBQyxNQUFBLEtBQUssRUFBRSxPQUFSO0FBQWlCLE1BQUEsS0FBSyxFQUFFO0FBQXhCLEtBRlUsRUFHVjtBQUFDLE1BQUEsS0FBSyxFQUFFLE1BQVI7QUFBZ0IsTUFBQSxLQUFLLEVBQUU7QUFBdkIsS0FIVTtBQVRkLEdBRDRCLENBQTlCO0FBaUJBLFNBQ0Usb0JBQUMsY0FBRCxDQUFDLFlBQUQsUUFDRSxvQkFBQyxjQUFELENBQUMsUUFBRDtBQUNFLElBQUEsSUFBSSxFQUFFLEtBRFI7QUFFRSxJQUFBLFVBQVUsRUFBRTtBQUFBLFVBQUUsSUFBRixRQUFFLElBQUY7QUFBQSxhQUFZLG9CQUFDLGFBQUQsQ0FBQyxPQUFEO0FBQWEsUUFBQSxPQUFPLEVBQUU7QUFBdEIsUUFBWjtBQUFBLEtBRmQ7QUFHRSxJQUFBLFlBQVksRUFBRSxzQkFBQyxJQUFEO0FBQUEsYUFBVSxJQUFJLENBQUMsRUFBZjtBQUFBO0FBSGhCLElBREYsQ0FERjtBQVNEOztBQTNCRCxPQUFBLENBQUEsT0FBQSxHQUFBLGNBQUEiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QgZnJvbSAncmVhY3QnO1xuaW1wb3J0IHtTYWZlQXJlYVZpZXcsIEZsYXRMaXN0fSBmcm9tICdyZWFjdC1uYXRpdmUnO1xuaW1wb3J0IFByb2R1Y3RDYXJkIGZyb20gJy4vUHJvZHVjdENhcmQnO1xuaW1wb3J0IHtQcm9kdWN0fSBmcm9tICcuL3R5cGVzJztcbmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIFByb2R1Y3RzU2NyZWVuKCkge1xuICBjb25zdCBpdGVtczogQXJyYXk8UHJvZHVjdD4gPSBbXG4gICAge1xuICAgICAgaWQ6ICcxNDM4MjQ5JyxcbiAgICAgIGFydGljbGU6ICcxNDM4MjQ5JyxcbiAgICAgIGltYWdlOlxuICAgICAgICAnaHR0cHM6Ly93d3cuYWhsc2VsbC5zZS9leHRlcm5hbC1hc3NldHMvU1RFUF9JQl9CSUxEL0pQRUdsYXJnZTgwMF84MDAvc3RkLmxhbmcuYWxsLzUyLzc5LzI3MTQ1Mjc5LmpwZz9wcmVzZXQ9bGFyZ2UnLFxuICAgICAgdGl0bGU6ICdLb3BwbGluZ3Nkb3NhIFUtNTYgRXh4YWN0dml0IFNjaG5laWRlcicsXG4gICAgICBkZXNjcmlwdGlvbjpcbiAgICAgICAgJ0thcHNsYWQga29wcGxpbmdzZG9zYSBVLTU2IGbDtnIgdXRhbnDDpWxpZ2dhbmRlIG1vbnRhZ2UuIFNrcnV2ZmFzdHNhdHQgbG9jay4gSGFyIHRvdGFsdCB0aW8gbmlwcGxhciBmw7ZyIGthYmVsaW5nw6VuZ2FyIHNhbXQgdHbDpSB1dGJyeXRuaW5nYXIgaSBib3R0ZW4gZsO2ciBrYWJlbGluZ8OlbmcgYmFraWZyw6VuLicsXG4gICAgICBwcmljZTogMTAsXG4gICAgICBwYXJhbWV0ZXJzOiBbXG4gICAgICAgIHtsYWJlbDogJ0JyZWRkJywgdmFsdWU6ICc4NyBtbSd9LFxuICAgICAgICB7bGFiZWw6ICdMw6RuZ2QnLCB2YWx1ZTogJzg3IG1tJ30sXG4gICAgICAgIHtsYWJlbDogJ0RqdXAnLCB2YWx1ZTogJzM5IG1tJ30sXG4gICAgICBdLFxuICAgIH0sXG4gIF07XG4gIHJldHVybiAoXG4gICAgPFNhZmVBcmVhVmlldz5cbiAgICAgIDxGbGF0TGlzdFxuICAgICAgICBkYXRhPXtpdGVtc31cbiAgICAgICAgcmVuZGVySXRlbT17KHtpdGVtfSkgPT4gPFByb2R1Y3RDYXJkIHByb2R1Y3Q9e2l0ZW19IC8+fVxuICAgICAgICBrZXlFeHRyYWN0b3I9eyhpdGVtKSA9PiBpdGVtLmlkfVxuICAgICAgLz5cbiAgICA8L1NhZmVBcmVhVmlldz5cbiAgKTtcbn1cbiJdfQ==

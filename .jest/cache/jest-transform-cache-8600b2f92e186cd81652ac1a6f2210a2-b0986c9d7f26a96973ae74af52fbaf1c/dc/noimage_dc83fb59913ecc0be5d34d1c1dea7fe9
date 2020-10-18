@@ -1,0 +1,5 @@
+685cc69318f67ef0dd17125d94138a47
+module.exports = {
+      testUri: 
+        "../../../src/modules/products/no-image.png"
+    };

@@ -1,0 +1,5 @@
+04bbdacd2cea84a835a0ddff8efeee84
+"use strict";Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _react = _interopRequireDefault(require("react"));
+var _reactNative = require("react-native");function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =
+
+_reactNative.View;exports.default = _default;

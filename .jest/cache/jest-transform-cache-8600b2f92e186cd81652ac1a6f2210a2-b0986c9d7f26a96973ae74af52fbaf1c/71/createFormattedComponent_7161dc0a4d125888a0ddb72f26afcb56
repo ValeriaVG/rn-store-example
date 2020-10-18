@@ -1,0 +1,61 @@
+6acaefaa3c0294d71ae1615f6fc42d51
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.createFormattedComponent = exports.createFormattedDateTimePartsComponent = exports.FormattedNumberParts = void 0;
+
+var React = require("tslib").__importStar(require("react"));
+
+
+var DisplayName;
+(function (DisplayName) {
+  DisplayName["formatDate"] = "FormattedDate";
+  DisplayName["formatTime"] = "FormattedTime";
+  DisplayName["formatNumber"] = "FormattedNumber";
+  DisplayName["formatList"] = "FormattedList";
+
+
+  DisplayName["formatDisplayName"] = "FormattedDisplayName";
+})(DisplayName || (DisplayName = {}));
+var DisplayNameParts;
+(function (DisplayNameParts) {
+  DisplayNameParts["formatDate"] = "FormattedDateParts";
+  DisplayNameParts["formatTime"] = "FormattedTimeParts";
+  DisplayNameParts["formatNumber"] = "FormattedNumberParts";
+  DisplayNameParts["formatList"] = "FormattedListParts";
+})(DisplayNameParts || (DisplayNameParts = {}));
+exports.FormattedNumberParts = function (props) {return React.createElement(require("./injectIntl").Context.Consumer, null, function (intl) {
+    require("../utils").invariantIntlContext(intl);
+    var value = props.value,children = props.children,formatProps = require("tslib").__rest(props, ["value", "children"]);
+    return children(intl.formatNumberToParts(value, formatProps));
+  });};
+exports.FormattedNumberParts.displayName = 'FormattedNumberParts';
+function createFormattedDateTimePartsComponent(name) {
+  var ComponentParts = function ComponentParts(props) {return React.createElement(require("./injectIntl").Context.Consumer, null, function (intl) {
+      require("../utils").invariantIntlContext(intl);
+      var value = props.value,children = props.children,formatProps = require("tslib").__rest(props, ["value", "children"]);
+      var date = typeof value === 'string' ? new Date(value || 0) : value;
+      var formattedParts = name === 'formatDate' ?
+      intl.formatDateToParts(date, formatProps) :
+      intl.formatTimeToParts(date, formatProps);
+      return children(formattedParts);
+    });};
+  ComponentParts.displayName = DisplayNameParts[name];
+  return ComponentParts;
+}
+exports.createFormattedDateTimePartsComponent = createFormattedDateTimePartsComponent;
+function createFormattedComponent(name) {
+  var Component = function Component(props) {return React.createElement(require("./injectIntl").Context.Consumer, null, function (intl) {
+      require("../utils").invariantIntlContext(intl);
+      var value = props.value,children = props.children,formatProps = require("tslib").__rest(props, ["value", "children"]);
+
+      var formattedValue = intl[name](value, formatProps);
+      if (typeof children === 'function') {
+        return children(formattedValue);
+      }
+      var Text = intl.textComponent || React.Fragment;
+      return React.createElement(Text, null, formattedValue);
+    });};
+  Component.displayName = DisplayName[name];
+  return Component;
+}
+exports.createFormattedComponent = createFormattedComponent;

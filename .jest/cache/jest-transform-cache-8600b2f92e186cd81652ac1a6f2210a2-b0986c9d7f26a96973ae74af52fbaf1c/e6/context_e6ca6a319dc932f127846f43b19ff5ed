@@ -1,0 +1,15 @@
+74879455e0b5970a127990de2d089c33
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var react_1 = require("react");
+
+var UserContext = react_1.createContext({
+  user: undefined,
+  setUser: function setUser() {}
+});
+exports.default = UserContext;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy92YWxlcmlhdmlhbmFndXNtYW8vZ2l0L3N0b3JlL3NyYy9tb2R1bGVzL3Byb2ZpbGUvY29udGV4dC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7QUFBQSxJQUFBLE9BQUEsR0FBQSxPQUFBLENBQUEsT0FBQSxDQUFBOztBQUdBLElBQU0sV0FBVyxHQUFHLE9BQUEsQ0FBQSxhQUFBLENBR2pCO0FBQ0QsRUFBQSxJQUFJLEVBQUUsU0FETDtBQUVELEVBQUEsT0FBTyxFQUFFLG1CQUFLLENBQUc7QUFGaEIsQ0FIaUIsQ0FBcEI7QUFPQSxPQUFBLENBQUEsT0FBQSxHQUFlLFdBQWYiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQge2NyZWF0ZUNvbnRleHR9IGZyb20gJ3JlYWN0JztcbmltcG9ydCB7VXNlcn0gZnJvbSAnLi90eXBlcyc7XG5cbmNvbnN0IFVzZXJDb250ZXh0ID0gY3JlYXRlQ29udGV4dDx7XG4gIHVzZXI/OiBVc2VyO1xuICBzZXRVc2VyOiAodXNlcjogVXNlcikgPT4gdm9pZDtcbn0+KHtcbiAgdXNlcjogdW5kZWZpbmVkLFxuICBzZXRVc2VyOiAoKSA9PiB7fSxcbn0pO1xuZXhwb3J0IGRlZmF1bHQgVXNlckNvbnRleHQ7XG4iXX0=

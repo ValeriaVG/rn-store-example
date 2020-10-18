@@ -1,0 +1,53 @@
+498f8fe01fbbdfe688e75b0ab3830aee
+
+
+
+
+
+
+
+
+
+
+'use strict';
+
+
+
+
+var _NativeTVNavigationEventEmitter = _interopRequireDefault(require("./NativeTVNavigationEventEmitter"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}function _createClass(Constructor, protoProps, staticProps) {if (protoProps) _defineProperties(Constructor.prototype, protoProps);if (staticProps) _defineProperties(Constructor, staticProps);return Constructor;}var
+
+
+TVEventHandler = function () {function TVEventHandler() {_classCallCheck(this, TVEventHandler);this.
+    __nativeTVNavigationEventListener = null;this.
+    __nativeTVNavigationEventEmitter = null;}_createClass(TVEventHandler, [{ key: "enable", value: function enable(
+
+    component, callback) {
+      if (require('../../Utilities/Platform').OS === 'ios' && !_NativeTVNavigationEventEmitter.default) {
+        return;
+      }
+
+      this.__nativeTVNavigationEventEmitter = new (require('../../EventEmitter/NativeEventEmitter'))(
+      _NativeTVNavigationEventEmitter.default);
+
+      this.__nativeTVNavigationEventListener = this.__nativeTVNavigationEventEmitter.addListener(
+      'onHWKeyEvent',
+      function (data) {
+        if (callback) {
+          callback(component, data);
+        }
+      });
+
+    } }, { key: "disable", value: function disable()
+
+    {
+      if (this.__nativeTVNavigationEventListener) {
+        this.__nativeTVNavigationEventListener.remove();
+        delete this.__nativeTVNavigationEventListener;
+      }
+      if (this.__nativeTVNavigationEventEmitter) {
+        delete this.__nativeTVNavigationEventEmitter;
+      }
+    } }]);return TVEventHandler;}();
+
+
+module.exports = TVEventHandler;

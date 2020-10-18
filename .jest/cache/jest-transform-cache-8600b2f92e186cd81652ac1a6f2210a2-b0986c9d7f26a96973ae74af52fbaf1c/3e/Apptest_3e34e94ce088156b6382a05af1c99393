@@ -1,0 +1,57 @@
+5dd2c21af47b87a2716c2d2a0fc4a4cb
+"use strict";
+
+_getJestObj().mock('react-native/Libraries/BatchedBridge/NativeModules', function () {
+  return {
+    SettingsManager: {
+      settings: {
+        AppleLocale: 'en'
+      }
+    }
+  };
+});
+
+_getJestObj().mock('react-native-gesture-handler/RNGestureHandlerModule', function () {
+  return {
+    attachGestureHandler: jest.fn(),
+    createGestureHandler: jest.fn(),
+    dropGestureHandler: jest.fn(),
+    updateGestureHandler: jest.fn(),
+    State: {},
+    Directions: {}
+  };
+});
+
+function _getJestObj() {
+  var _require = require("@jest/globals"),
+      jest = _require.jest;
+
+  _getJestObj = function _getJestObj() {
+    return jest;
+  };
+
+  return jest;
+}
+
+var __importDefault = this && this.__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
+};
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+require("react-native");
+
+var react_1 = __importDefault(require("react"));
+
+var App_1 = __importDefault(require("../App"));
+
+var react_test_renderer_1 = __importDefault(require("react-test-renderer"));
+
+it('renders correctly', function () {
+  react_test_renderer_1.default.create(React.createElement(App_1.default, null));
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy92YWxlcmlhdmlhbmFndXNtYW8vZ2l0L3N0b3JlL3NyYy9fX3Rlc3RzX18vQXBwLnRlc3QudHN4Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBb0JBLGNBQUssSUFBTCxDQUFVLG9EQUFWLEVBQWdFO0FBQUEsU0FBTztBQUNyRSxJQUFBLGVBQWUsRUFBRTtBQUNmLE1BQUEsUUFBUSxFQUFFO0FBQUMsUUFBQSxXQUFXLEVBQUU7QUFBZDtBQURLO0FBRG9ELEdBQVA7QUFBQSxDQUFoRTs7QUFSQSxjQUFLLElBQUwsQ0FBVSxxREFBVixFQUFpRTtBQUFBLFNBQU87QUFDdEUsSUFBQSxvQkFBb0IsRUFBRSxJQUFJLENBQUMsRUFBTCxFQURnRDtBQUV0RSxJQUFBLG9CQUFvQixFQUFFLElBQUksQ0FBQyxFQUFMLEVBRmdEO0FBR3RFLElBQUEsa0JBQWtCLEVBQUUsSUFBSSxDQUFDLEVBQUwsRUFIa0Q7QUFJdEUsSUFBQSxvQkFBb0IsRUFBRSxJQUFJLENBQUMsRUFBTCxFQUpnRDtBQUt0RSxJQUFBLEtBQUssRUFBRSxFQUwrRDtBQU10RSxJQUFBLFVBQVUsRUFBRTtBQU4wRCxHQUFQO0FBQUEsQ0FBakU7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBUkEsT0FBQSxDQUFBLGNBQUEsQ0FBQTs7QUFDQSxJQUFBLE9BQUEsR0FBQSxlQUFBLENBQUEsT0FBQSxDQUFBLE9BQUEsQ0FBQSxDQUFBOztBQUVBLElBQUEsS0FBQSxHQUFBLGVBQUEsQ0FBQSxPQUFBLENBQUEsUUFBQSxDQUFBLENBQUE7O0FBR0EsSUFBQSxxQkFBQSxHQUFBLGVBQUEsQ0FBQSxPQUFBLENBQUEscUJBQUEsQ0FBQSxDQUFBOztBQWdCQSxFQUFFLENBQUMsbUJBQUQsRUFBc0IsWUFBSztBQUMzQixFQUFBLHFCQUFBLENBQUEsT0FBQSxDQUFTLE1BQVQsQ0FBZ0Isb0JBQUMsS0FBRCxDQUFDLE9BQUQsT0FBaEI7QUFDRCxDQUZDLENBQUYiLCJzb3VyY2VzQ29udGVudCI6WyIvKipcbiAqIEBmb3JtYXRcbiAqL1xuXG5pbXBvcnQgJ3JlYWN0LW5hdGl2ZSc7XG5pbXBvcnQgUmVhY3QgZnJvbSAncmVhY3QnO1xuXG5pbXBvcnQgQXBwIGZyb20gJy4uL0FwcCc7XG5cbi8vIE5vdGU6IHRlc3QgcmVuZGVyZXIgbXVzdCBiZSByZXF1aXJlZCBhZnRlciByZWFjdC1uYXRpdmUuXG5pbXBvcnQgcmVuZGVyZXIgZnJvbSAncmVhY3QtdGVzdC1yZW5kZXJlcic7XG5cbmplc3QubW9jaygncmVhY3QtbmF0aXZlLWdlc3R1cmUtaGFuZGxlci9STkdlc3R1cmVIYW5kbGVyTW9kdWxlJywgKCkgPT4gKHtcbiAgYXR0YWNoR2VzdHVyZUhhbmRsZXI6IGplc3QuZm4oKSxcbiAgY3JlYXRlR2VzdHVyZUhhbmRsZXI6IGplc3QuZm4oKSxcbiAgZHJvcEdlc3R1cmVIYW5kbGVyOiBqZXN0LmZuKCksXG4gIHVwZGF0ZUdlc3R1cmVIYW5kbGVyOiBqZXN0LmZuKCksXG4gIFN0YXRlOiB7fSxcbiAgRGlyZWN0aW9uczoge30sXG59KSk7XG5qZXN0Lm1vY2soJ3JlYWN0LW5hdGl2ZS9MaWJyYXJpZXMvQmF0Y2hlZEJyaWRnZS9OYXRpdmVNb2R1bGVzJywgKCkgPT4gKHtcbiAgU2V0dGluZ3NNYW5hZ2VyOiB7XG4gICAgc2V0dGluZ3M6IHtBcHBsZUxvY2FsZTogJ2VuJ30sXG4gIH0sXG59KSk7XG5cbml0KCdyZW5kZXJzIGNvcnJlY3RseScsICgpID0+IHtcbiAgcmVuZGVyZXIuY3JlYXRlKDxBcHAgLz4pO1xufSk7XG4iXX0=

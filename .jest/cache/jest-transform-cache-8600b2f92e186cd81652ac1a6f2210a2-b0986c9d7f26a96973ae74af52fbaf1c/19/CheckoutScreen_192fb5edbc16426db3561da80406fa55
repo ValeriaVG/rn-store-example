@@ -1,0 +1,76 @@
+490a5cc1c38659adcea47fadb6158c59
+"use strict";
+
+var __createBinding = this && this.__createBinding || (Object.create ? function (o, m, k, k2) {
+  if (k2 === undefined) k2 = k;
+  Object.defineProperty(o, k2, {
+    enumerable: true,
+    get: function get() {
+      return m[k];
+    }
+  });
+} : function (o, m, k, k2) {
+  if (k2 === undefined) k2 = k;
+  o[k2] = m[k];
+});
+
+var __setModuleDefault = this && this.__setModuleDefault || (Object.create ? function (o, v) {
+  Object.defineProperty(o, "default", {
+    enumerable: true,
+    value: v
+  });
+} : function (o, v) {
+  o["default"] = v;
+});
+
+var __importStar = this && this.__importStar || function (mod) {
+  if (mod && mod.__esModule) return mod;
+  var result = {};
+  if (mod != null) for (var k in mod) {
+    if (k !== "default" && Object.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+  }
+
+  __setModuleDefault(result, mod);
+
+  return result;
+};
+
+var __importDefault = this && this.__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
+};
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var react_1 = __importStar(require("react"));
+
+var react_native_1 = require("react-native");
+
+var context_1 = __importDefault(require("./context"));
+
+var CheckoutRow_1 = __importDefault(require("./CheckoutRow"));
+
+var EmptyCheckout_1 = __importDefault(require("./EmptyCheckout"));
+
+function CheckoutScreen() {
+  var _react_1$useContext = react_1.useContext(context_1.default),
+      items = _react_1$useContext.items;
+
+  return React.createElement(react_native_1.SafeAreaView, null, React.createElement(react_native_1.FlatList, {
+    data: items,
+    renderItem: function renderItem(_ref) {
+      var item = _ref.item;
+      return React.createElement(CheckoutRow_1.default, item);
+    },
+    keyExtractor: function keyExtractor(item) {
+      return item.product.id;
+    },
+    ListEmptyComponent: React.createElement(EmptyCheckout_1.default, null)
+  }));
+}
+
+exports.default = CheckoutScreen;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy92YWxlcmlhdmlhbmFndXNtYW8vZ2l0L3N0b3JlL3NyYy9tb2R1bGVzL2NoZWNrb3V0L0NoZWNrb3V0U2NyZWVuLnRzeCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUEsSUFBQSxPQUFBLEdBQUEsWUFBQSxDQUFBLE9BQUEsQ0FBQSxPQUFBLENBQUEsQ0FBQTs7QUFDQSxJQUFBLGNBQUEsR0FBQSxPQUFBLENBQUEsY0FBQSxDQUFBOztBQUVBLElBQUEsU0FBQSxHQUFBLGVBQUEsQ0FBQSxPQUFBLENBQUEsV0FBQSxDQUFBLENBQUE7O0FBQ0EsSUFBQSxhQUFBLEdBQUEsZUFBQSxDQUFBLE9BQUEsQ0FBQSxlQUFBLENBQUEsQ0FBQTs7QUFDQSxJQUFBLGVBQUEsR0FBQSxlQUFBLENBQUEsT0FBQSxDQUFBLGlCQUFBLENBQUEsQ0FBQTs7QUFFQSxTQUF3QixjQUF4QixHQUFzQztBQUFBLDRCQUNwQixPQUFBLENBQUEsVUFBQSxDQUFXLFNBQUEsQ0FBQSxPQUFYLENBRG9CO0FBQUEsTUFDN0IsS0FENkIsdUJBQzdCLEtBRDZCOztBQUVwQyxTQUNFLG9CQUFDLGNBQUQsQ0FBQyxZQUFELFFBQ0Usb0JBQUMsY0FBRCxDQUFDLFFBQUQ7QUFDRSxJQUFBLElBQUksRUFBRSxLQURSO0FBRUUsSUFBQSxVQUFVLEVBQUU7QUFBQSxVQUFFLElBQUYsUUFBRSxJQUFGO0FBQUEsYUFBWSxvQkFBQyxhQUFELENBQUMsT0FBRCxFQUFpQixJQUFqQixDQUFaO0FBQUEsS0FGZDtBQUdFLElBQUEsWUFBWSxFQUFFLHNCQUFDLElBQUQ7QUFBQSxhQUFVLElBQUksQ0FBQyxPQUFMLENBQWEsRUFBdkI7QUFBQSxLQUhoQjtBQUlFLElBQUEsa0JBQWtCLEVBQUUsb0JBQUMsZUFBRCxDQUFDLE9BQUQ7QUFKdEIsSUFERixDQURGO0FBVUQ7O0FBWkQsT0FBQSxDQUFBLE9BQUEsR0FBQSxjQUFBIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0LCB7dXNlQ29udGV4dH0gZnJvbSAncmVhY3QnO1xuaW1wb3J0IHtTYWZlQXJlYVZpZXcsIEZsYXRMaXN0fSBmcm9tICdyZWFjdC1uYXRpdmUnO1xuXG5pbXBvcnQgQ2hlY2tvdXRDb250ZXh0IGZyb20gJy4vY29udGV4dCc7XG5pbXBvcnQgQ2hlY2tvdXRSb3cgZnJvbSAnLi9DaGVja291dFJvdyc7XG5pbXBvcnQgRW1wdHlDaGVja291dCBmcm9tICcuL0VtcHR5Q2hlY2tvdXQnO1xuXG5leHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBDaGVja291dFNjcmVlbigpIHtcbiAgY29uc3Qge2l0ZW1zfSA9IHVzZUNvbnRleHQoQ2hlY2tvdXRDb250ZXh0KTtcbiAgcmV0dXJuIChcbiAgICA8U2FmZUFyZWFWaWV3PlxuICAgICAgPEZsYXRMaXN0XG4gICAgICAgIGRhdGE9e2l0ZW1zfVxuICAgICAgICByZW5kZXJJdGVtPXsoe2l0ZW19KSA9PiA8Q2hlY2tvdXRSb3cgey4uLml0ZW19IC8+fVxuICAgICAgICBrZXlFeHRyYWN0b3I9eyhpdGVtKSA9PiBpdGVtLnByb2R1Y3QuaWR9XG4gICAgICAgIExpc3RFbXB0eUNvbXBvbmVudD17PEVtcHR5Q2hlY2tvdXQgLz59XG4gICAgICAvPlxuICAgIDwvU2FmZUFyZWFWaWV3PlxuICApO1xufVxuIl19

@@ -1,0 +1,181 @@
+01b417e1f148af7e0d75d934df9f86ce
+"use strict";function _objectWithoutProperties(source, excluded) {if (source == null) return {};var target = _objectWithoutPropertiesLoose(source, excluded);var key, i;if (Object.getOwnPropertySymbols) {var sourceSymbolKeys = Object.getOwnPropertySymbols(source);for (i = 0; i < sourceSymbolKeys.length; i++) {key = sourceSymbolKeys[i];if (excluded.indexOf(key) >= 0) continue;if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;target[key] = source[key];}}return target;}function _objectWithoutPropertiesLoose(source, excluded) {if (source == null) return {};var target = {};var sourceKeys = Object.keys(source);var key, i;for (i = 0; i < sourceKeys.length; i++) {key = sourceKeys[i];if (excluded.indexOf(key) >= 0) continue;target[key] = source[key];}return target;}
+
+Object.defineProperty(exports, "__esModule", {
+  value: true });
+
+exports.default = BottomTabBarItem;
+
+var _react = _interopRequireDefault(require("react"));
+
+
+
+
+
+var _color = _interopRequireDefault(require("color"));
+
+var _TabBarIcon = _interopRequireDefault(require("./TabBarIcon"));
+
+function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+function _extends() {_extends = Object.assign || function (target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i];for (var key in source) {if (Object.prototype.hasOwnProperty.call(source, key)) {target[key] = source[key];}}}return target;};return _extends.apply(this, arguments);}
+
+function BottomTabBarItem(_ref)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{var focused = _ref.focused,route = _ref.route,label = _ref.label,icon = _ref.icon,badge = _ref.badge,to = _ref.to,_ref$button = _ref.button,button = _ref$button === void 0 ? function (_ref2) {var children = _ref2.children,style = _ref2.style,_onPress = _ref2.onPress,to = _ref2.to,accessibilityRole = _ref2.accessibilityRole,rest = _objectWithoutProperties(_ref2, ["children", "style", "onPress", "to", "accessibilityRole"]);if (require("react-native").Platform.OS === 'web' && to) {return _react.default.createElement(require("@react-navigation/native").Link, _extends({}, rest, { to: to, style: [styles.button, style], onPress: function onPress(e) {if (!(e.metaKey || e.altKey || e.ctrlKey || e.shiftKey) && (e.button == null || e.button === 0)) {e.preventDefault();_onPress === null || _onPress === void 0 ? void 0 : _onPress(e);}} }), children);} else {return _react.default.createElement(require("react-native").TouchableWithoutFeedback, _extends({}, rest, { accessibilityRole: accessibilityRole, onPress: _onPress }), _react.default.createElement(require("react-native").View, { style: style }, children));}} : _ref$button,accessibilityLabel = _ref.accessibilityLabel,testID = _ref.testID,onPress = _ref.onPress,onLongPress = _ref.onLongPress,horizontal = _ref.horizontal,customActiveTintColor = _ref.activeTintColor,customInactiveTintColor = _ref.inactiveTintColor,_ref$activeBackground = _ref.activeBackgroundColor,activeBackgroundColor = _ref$activeBackground === void 0 ? 'transparent' : _ref$activeBackground,_ref$inactiveBackgrou = _ref.inactiveBackgroundColor,inactiveBackgroundColor = _ref$inactiveBackgrou === void 0 ? 'transparent' : _ref$inactiveBackgrou,_ref$showLabel = _ref.showLabel,showLabel = _ref$showLabel === void 0 ? true : _ref$showLabel,allowFontScaling = _ref.allowFontScaling,labelStyle = _ref.labelStyle,iconStyle = _ref.iconStyle,style = _ref.style;var _ref3 =
+
+
+  (0, require("@react-navigation/native").useTheme)(),colors = _ref3.colors;
+  var activeTintColor = customActiveTintColor === undefined ? colors.primary : customActiveTintColor;
+  var inactiveTintColor = customInactiveTintColor === undefined ? (0, _color.default)(colors.text).mix((0, _color.default)(colors.card), 0.5).hex() : customInactiveTintColor;
+
+  var renderLabel = function renderLabel(_ref4)
+
+  {var focused = _ref4.focused;
+    if (showLabel === false) {
+      return null;
+    }
+
+    var color = focused ? activeTintColor : inactiveTintColor;
+
+    if (typeof label === 'string') {
+      return _react.default.createElement(require("react-native").Text, {
+        numberOfLines: 1,
+        style: [styles.label, {
+          color: color },
+        horizontal ? styles.labelBeside : styles.labelBeneath, labelStyle],
+        allowFontScaling: allowFontScaling },
+      label);
+    }
+
+    return label({
+      focused: focused,
+      color: color,
+      position: horizontal ? 'beside-icon' : 'below-icon' });
+
+  };
+
+  var renderIcon = function renderIcon(_ref5)
+
+  {var focused = _ref5.focused;
+    if (icon === undefined) {
+      return null;
+    }
+
+    var activeOpacity = focused ? 1 : 0;
+    var inactiveOpacity = focused ? 0 : 1;
+    return _react.default.createElement(_TabBarIcon.default, {
+      route: route,
+      horizontal: horizontal,
+      badge: badge,
+      activeOpacity: activeOpacity,
+      inactiveOpacity: inactiveOpacity,
+      activeTintColor: activeTintColor,
+      inactiveTintColor: inactiveTintColor,
+      renderIcon: icon,
+      style: iconStyle });
+
+  };
+
+  var scene = {
+    route: route,
+    focused: focused };
+
+  var backgroundColor = focused ? activeBackgroundColor : inactiveBackgroundColor;
+  return button({
+    to: to,
+    onPress: onPress,
+    onLongPress: onLongPress,
+    testID: testID,
+    accessibilityLabel: accessibilityLabel,
+    accessibilityRole: 'button',
+    accessibilityState: {
+      selected: focused },
+
+
+    accessibilityStates: focused ? ['selected'] : [],
+    style: [styles.tab, {
+      backgroundColor: backgroundColor },
+    horizontal ? styles.tabLandscape : styles.tabPortrait, style],
+    children: _react.default.createElement(_react.default.Fragment, null, renderIcon(scene), renderLabel(scene)) });
+
+}
+
+var styles = require("react-native").StyleSheet.create({
+  tab: {
+    flex: 1,
+    alignItems: 'center' },
+
+  tabPortrait: {
+    justifyContent: 'flex-end',
+    flexDirection: 'column' },
+
+  tabLandscape: {
+    justifyContent: 'center',
+    flexDirection: 'row' },
+
+  label: {
+    textAlign: 'center',
+    backgroundColor: 'transparent' },
+
+  labelBeneath: {
+    fontSize: 10 },
+
+  labelBeside: {
+    fontSize: 13,
+    marginLeft: 20,
+    marginTop: 3 },
+
+  button: {
+    display: 'flex' } });

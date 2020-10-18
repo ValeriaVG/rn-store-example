@@ -1,0 +1,23 @@
+fc4a1115ccd5d8e471f03b2130c0a13d
+
+
+
+
+
+
+
+
+
+
+'use strict';
+var _NativeSoundManager = _interopRequireDefault(require("./NativeSoundManager"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+var SoundManager = {
+  playTouchSound: function playTouchSound() {
+    if (_NativeSoundManager.default) {
+      _NativeSoundManager.default.playTouchSound();
+    }
+  } };
+
+
+module.exports = SoundManager;

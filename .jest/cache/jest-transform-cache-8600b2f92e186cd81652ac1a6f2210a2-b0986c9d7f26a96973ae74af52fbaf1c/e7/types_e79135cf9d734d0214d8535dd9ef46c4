@@ -1,0 +1,18 @@
+c626dddf08e736d97a311ded19cd69fc
+"use strict";function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}
+
+Object.defineProperty(exports, "__esModule", {
+  value: true });
+
+exports.PrivateValueStore = void 0;
+
+function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var
+
+PrivateValueStore =
+function PrivateValueStore() {_classCallCheck(this, PrivateValueStore);
+  _defineProperty(this, '', void 0);
+};
+
+
+
+exports.PrivateValueStore = PrivateValueStore;

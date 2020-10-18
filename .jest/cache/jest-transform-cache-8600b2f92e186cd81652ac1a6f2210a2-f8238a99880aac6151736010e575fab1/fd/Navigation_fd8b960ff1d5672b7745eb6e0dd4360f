@@ -1,0 +1,170 @@
+ccfea693206771dcd02748d23d0308ee
+"use strict";
+
+var _jsxFileName = "/Users/valeriavianagusmao/git/store/src/Navigation.tsx";
+
+var __createBinding = this && this.__createBinding || (Object.create ? function (o, m, k, k2) {
+  if (k2 === undefined) k2 = k;
+  Object.defineProperty(o, k2, {
+    enumerable: true,
+    get: function get() {
+      return m[k];
+    }
+  });
+} : function (o, m, k, k2) {
+  if (k2 === undefined) k2 = k;
+  o[k2] = m[k];
+});
+
+var __setModuleDefault = this && this.__setModuleDefault || (Object.create ? function (o, v) {
+  Object.defineProperty(o, "default", {
+    enumerable: true,
+    value: v
+  });
+} : function (o, v) {
+  o["default"] = v;
+});
+
+var __importStar = this && this.__importStar || function (mod) {
+  if (mod && mod.__esModule) return mod;
+  var result = {};
+  if (mod != null) for (var k in mod) {
+    if (k !== "default" && Object.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+  }
+
+  __setModuleDefault(result, mod);
+
+  return result;
+};
+
+var __importDefault = this && this.__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
+};
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var react_1 = __importStar(require("react"));
+
+var native_1 = require("@react-navigation/native");
+
+var bottom_tabs_1 = require("@react-navigation/bottom-tabs");
+
+var react_native_fontawesome_1 = require("@fortawesome/react-native-fontawesome");
+
+var free_solid_svg_icons_1 = require("@fortawesome/free-solid-svg-icons");
+
+var ProductsStack_1 = __importDefault(require("./modules/products/ProductsStack"));
+
+var SearchStack_1 = __importDefault(require("./modules/search/SearchStack"));
+
+var ProfileStack_1 = __importDefault(require("./modules/profile/ProfileStack"));
+
+var CheckoutStack_1 = __importDefault(require("./modules/checkout/CheckoutStack"));
+
+var theme_1 = __importDefault(require("./theme"));
+
+var context_1 = __importDefault(require("modules/checkout/context"));
+
+var Tab = bottom_tabs_1.createBottomTabNavigator();
+
+function Navigation() {
+  var _this = this;
+
+  var _react_1$useContext = react_1.useContext(context_1.default),
+      items = _react_1$useContext.items;
+
+  return React.createElement(native_1.NavigationContainer, {
+    theme: theme_1.default,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 39,
+      columnNumber: 13
+    }
+  }, React.createElement(Tab.Navigator, {
+    tabBarOptions: {
+      tabStyle: {
+        marginTop: 8,
+        height: 48
+      }
+    },
+    screenOptions: function screenOptions(_ref) {
+      var route = _ref.route;
+      return {
+        tabBarIcon: function tabBarIcon(_ref2) {
+          var color = _ref2.color,
+              size = _ref2.size;
+          var icon = {
+            Products: free_solid_svg_icons_1.faStoreAlt,
+            Search: free_solid_svg_icons_1.faSearch,
+            Profile: free_solid_svg_icons_1.faUser,
+            Checkout: free_solid_svg_icons_1.faShoppingCart
+          }[route.name];
+          return React.createElement(react_native_fontawesome_1.FontAwesomeIcon, {
+            icon: icon,
+            color: color,
+            size: size,
+            __self: _this,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 50,
+              columnNumber: 20
+            }
+          });
+        }
+      };
+    },
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 40,
+      columnNumber: 7
+    }
+  }, React.createElement(Tab.Screen, {
+    name: "Products",
+    component: ProductsStack_1.default,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 53,
+      columnNumber: 9
+    }
+  }), React.createElement(Tab.Screen, {
+    name: "Profile",
+    component: ProfileStack_1.default,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 54,
+      columnNumber: 9
+    }
+  }), React.createElement(Tab.Screen, {
+    name: "Search",
+    component: SearchStack_1.default,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 55,
+      columnNumber: 9
+    }
+  }), React.createElement(Tab.Screen, {
+    name: "Checkout",
+    component: CheckoutStack_1.default,
+    options: items.length ? {
+      tabBarBadge: items.length
+    } : {},
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 56,
+      columnNumber: 9
+    }
+  })));
+}
+
+exports.default = Navigation;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy92YWxlcmlhdmlhbmFndXNtYW8vZ2l0L3N0b3JlL3NyYy9OYXZpZ2F0aW9uLnRzeCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQSxJQUFBLE9BQUEsR0FBQSxZQUFBLENBQUEsT0FBQSxDQUFBLE9BQUEsQ0FBQSxDQUFBOztBQUNBLElBQUEsUUFBQSxHQUFBLE9BQUEsQ0FBQSwwQkFBQSxDQUFBOztBQUNBLElBQUEsYUFBQSxHQUFBLE9BQUEsQ0FBQSwrQkFBQSxDQUFBOztBQUNBLElBQUEsMEJBQUEsR0FBQSxPQUFBLENBQUEsdUNBQUEsQ0FBQTs7QUFDQSxJQUFBLHNCQUFBLEdBQUEsT0FBQSxDQUFBLG1DQUFBLENBQUE7O0FBUUEsSUFBQSxlQUFBLEdBQUEsZUFBQSxDQUFBLE9BQUEsQ0FBQSxrQ0FBQSxDQUFBLENBQUE7O0FBQ0EsSUFBQSxhQUFBLEdBQUEsZUFBQSxDQUFBLE9BQUEsQ0FBQSw4QkFBQSxDQUFBLENBQUE7O0FBQ0EsSUFBQSxjQUFBLEdBQUEsZUFBQSxDQUFBLE9BQUEsQ0FBQSxnQ0FBQSxDQUFBLENBQUE7O0FBQ0EsSUFBQSxlQUFBLEdBQUEsZUFBQSxDQUFBLE9BQUEsQ0FBQSxrQ0FBQSxDQUFBLENBQUE7O0FBQ0EsSUFBQSxPQUFBLEdBQUEsZUFBQSxDQUFBLE9BQUEsQ0FBQSxTQUFBLENBQUEsQ0FBQTs7QUFDQSxJQUFBLFNBQUEsR0FBQSxlQUFBLENBQUEsT0FBQSxDQUFBLDBCQUFBLENBQUEsQ0FBQTs7QUFFQSxJQUFNLEdBQUcsR0FBRyxhQUFBLENBQUEsd0JBQUEsRUFBWjs7QUFFQSxTQUF3QixVQUF4QixHQUFrQztBQUFBOztBQUFBLDRCQUNoQixPQUFBLENBQUEsVUFBQSxDQUFXLFNBQUEsQ0FBQSxPQUFYLENBRGdCO0FBQUEsTUFDekIsS0FEeUIsdUJBQ3pCLEtBRHlCOztBQUVoQyxTQUNFLG9CQUFDLFFBQUQsQ0FBQyxtQkFBRDtBQUFxQixJQUFBLEtBQUssRUFBRSxPQUFBLENBQUEsT0FBNUI7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxLQUNFLG9CQUFDLEdBQUQsQ0FBSyxTQUFMO0FBQ0UsSUFBQSxhQUFhLEVBQUU7QUFDYixNQUFBLFFBQVEsRUFBRTtBQUFDLFFBQUEsU0FBUyxFQUFFLENBQVo7QUFBZSxRQUFBLE1BQU0sRUFBRTtBQUF2QjtBQURHLEtBRGpCO0FBSUUsSUFBQSxhQUFhLEVBQUU7QUFBQSxVQUFFLEtBQUYsUUFBRSxLQUFGO0FBQUEsYUFBYztBQUMzQixRQUFBLFVBQVUsRUFBRSwyQkFBa0I7QUFBQSxjQUFoQixLQUFnQixTQUFoQixLQUFnQjtBQUFBLGNBQVQsSUFBUyxTQUFULElBQVM7QUFDNUIsY0FBTSxJQUFJLEdBQW9CO0FBQzVCLFlBQUEsUUFBUSxFQUFFLHNCQUFBLENBQUEsVUFEa0I7QUFFNUIsWUFBQSxNQUFNLEVBQUUsc0JBQUEsQ0FBQSxRQUZvQjtBQUc1QixZQUFBLE9BQU8sRUFBRSxzQkFBQSxDQUFBLE1BSG1CO0FBSTVCLFlBQUEsUUFBUSxFQUFFLHNCQUFBLENBQUE7QUFKa0IsWUFLcEIsS0FBSyxDQUFDLElBTGMsQ0FBOUI7QUFNQSxpQkFBTyxvQkFBQywwQkFBRCxDQUFDLGVBQUQ7QUFBaUIsWUFBQSxJQUFJLEVBQUUsSUFBdkI7QUFBNkIsWUFBQSxLQUFLLEVBQUUsS0FBcEM7QUFBMkMsWUFBQSxJQUFJLEVBQUUsSUFBakQ7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxZQUFQO0FBQ0Q7QUFUMEIsT0FBZDtBQUFBLEtBSmpCO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsS0FlRSxvQkFBQyxHQUFELENBQUssTUFBTDtBQUFZLElBQUEsSUFBSSxFQUFDLFVBQWpCO0FBQTRCLElBQUEsU0FBUyxFQUFFLGVBQUEsQ0FBQSxPQUF2QztBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLElBZkYsRUFnQkUsb0JBQUMsR0FBRCxDQUFLLE1BQUw7QUFBWSxJQUFBLElBQUksRUFBQyxTQUFqQjtBQUEyQixJQUFBLFNBQVMsRUFBRSxjQUFBLENBQUEsT0FBdEM7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxJQWhCRixFQWlCRSxvQkFBQyxHQUFELENBQUssTUFBTDtBQUFZLElBQUEsSUFBSSxFQUFDLFFBQWpCO0FBQTBCLElBQUEsU0FBUyxFQUFFLGFBQUEsQ0FBQSxPQUFyQztBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLElBakJGLEVBa0JFLG9CQUFDLEdBQUQsQ0FBSyxNQUFMO0FBQ0UsSUFBQSxJQUFJLEVBQUMsVUFEUDtBQUVFLElBQUEsU0FBUyxFQUFFLGVBQUEsQ0FBQSxPQUZiO0FBR0UsSUFBQSxPQUFPLEVBQUUsS0FBSyxDQUFDLE1BQU4sR0FBZTtBQUFDLE1BQUEsV0FBVyxFQUFFLEtBQUssQ0FBQztBQUFwQixLQUFmLEdBQTZDLEVBSHhEO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsSUFsQkYsQ0FERixDQURGO0FBNEJEOztBQTlCRCxPQUFBLENBQUEsT0FBQSxHQUFBLFVBQUEiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QsIHt1c2VDb250ZXh0fSBmcm9tICdyZWFjdCc7XG5pbXBvcnQge05hdmlnYXRpb25Db250YWluZXJ9IGZyb20gJ0ByZWFjdC1uYXZpZ2F0aW9uL25hdGl2ZSc7XG5pbXBvcnQge2NyZWF0ZUJvdHRvbVRhYk5hdmlnYXRvcn0gZnJvbSAnQHJlYWN0LW5hdmlnYXRpb24vYm90dG9tLXRhYnMnO1xuaW1wb3J0IHtGb250QXdlc29tZUljb259IGZyb20gJ0Bmb3J0YXdlc29tZS9yZWFjdC1uYXRpdmUtZm9udGF3ZXNvbWUnO1xuaW1wb3J0IHtcbiAgZmFTZWFyY2gsXG4gIGZhU2hvcHBpbmdDYXJ0LFxuICBmYVN0b3JlQWx0LFxuICBmYVVzZXIsXG4gIEljb25EZWZpbml0aW9uLFxufSBmcm9tICdAZm9ydGF3ZXNvbWUvZnJlZS1zb2xpZC1zdmctaWNvbnMnO1xuXG5pbXBvcnQgUHJvZHVjdHNTdGFjayBmcm9tICcuL21vZHVsZXMvcHJvZHVjdHMvUHJvZHVjdHNTdGFjayc7XG5pbXBvcnQgU2VhcmNoU3RhY2sgZnJvbSAnLi9tb2R1bGVzL3NlYXJjaC9TZWFyY2hTdGFjayc7XG5pbXBvcnQgUHJvZmlsZVN0YWNrIGZyb20gJy4vbW9kdWxlcy9wcm9maWxlL1Byb2ZpbGVTdGFjayc7XG5pbXBvcnQgQ2hlY2tvdXRTdGFjayBmcm9tICcuL21vZHVsZXMvY2hlY2tvdXQvQ2hlY2tvdXRTdGFjayc7XG5pbXBvcnQgdGhlbWUgZnJvbSAnLi90aGVtZSc7XG5pbXBvcnQgQ2hlY2tvdXRDb250ZXh0IGZyb20gJ21vZHVsZXMvY2hlY2tvdXQvY29udGV4dCc7XG5cbmNvbnN0IFRhYiA9IGNyZWF0ZUJvdHRvbVRhYk5hdmlnYXRvcigpO1xuXG5leHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBOYXZpZ2F0aW9uKCkge1xuICBjb25zdCB7aXRlbXN9ID0gdXNlQ29udGV4dChDaGVja291dENvbnRleHQpO1xuICByZXR1cm4gKFxuICAgIDxOYXZpZ2F0aW9uQ29udGFpbmVyIHRoZW1lPXt0aGVtZX0+XG4gICAgICA8VGFiLk5hdmlnYXRvclxuICAgICAgICB0YWJCYXJPcHRpb25zPXt7XG4gICAgICAgICAgdGFiU3R5bGU6IHttYXJnaW5Ub3A6IDgsIGhlaWdodDogNDh9LFxuICAgICAgICB9fVxuICAgICAgICBzY3JlZW5PcHRpb25zPXsoe3JvdXRlfSkgPT4gKHtcbiAgICAgICAgICB0YWJCYXJJY29uOiAoe2NvbG9yLCBzaXplfSkgPT4ge1xuICAgICAgICAgICAgY29uc3QgaWNvbjogSWNvbkRlZmluaXRpb24gPSAoe1xuICAgICAgICAgICAgICBQcm9kdWN0czogZmFTdG9yZUFsdCxcbiAgICAgICAgICAgICAgU2VhcmNoOiBmYVNlYXJjaCxcbiAgICAgICAgICAgICAgUHJvZmlsZTogZmFVc2VyLFxuICAgICAgICAgICAgICBDaGVja291dDogZmFTaG9wcGluZ0NhcnQsXG4gICAgICAgICAgICB9IGFzIGFueSlbcm91dGUubmFtZV07XG4gICAgICAgICAgICByZXR1cm4gPEZvbnRBd2Vzb21lSWNvbiBpY29uPXtpY29ufSBjb2xvcj17Y29sb3J9IHNpemU9e3NpemV9IC8+O1xuICAgICAgICAgIH0sXG4gICAgICAgIH0pfT5cbiAgICAgICAgPFRhYi5TY3JlZW4gbmFtZT1cIlByb2R1Y3RzXCIgY29tcG9uZW50PXtQcm9kdWN0c1N0YWNrfSAvPlxuICAgICAgICA8VGFiLlNjcmVlbiBuYW1lPVwiUHJvZmlsZVwiIGNvbXBvbmVudD17UHJvZmlsZVN0YWNrfSAvPlxuICAgICAgICA8VGFiLlNjcmVlbiBuYW1lPVwiU2VhcmNoXCIgY29tcG9uZW50PXtTZWFyY2hTdGFja30gLz5cbiAgICAgICAgPFRhYi5TY3JlZW5cbiAgICAgICAgICBuYW1lPVwiQ2hlY2tvdXRcIlxuICAgICAgICAgIGNvbXBvbmVudD17Q2hlY2tvdXRTdGFja31cbiAgICAgICAgICBvcHRpb25zPXtpdGVtcy5sZW5ndGggPyB7dGFiQmFyQmFkZ2U6IGl0ZW1zLmxlbmd0aH0gOiB7fX1cbiAgICAgICAgLz5cbiAgICAgIDwvVGFiLk5hdmlnYXRvcj5cbiAgICA8L05hdmlnYXRpb25Db250YWluZXI+XG4gICk7XG59XG4iXX0=

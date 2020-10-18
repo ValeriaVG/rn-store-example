@@ -1,0 +1,84 @@
+3c15fd0d2cacea3f8029430eac96ab61
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true });
+
+exports.default = TabBarIcon;
+
+var _react = _interopRequireDefault(require("react"));
+
+
+
+var _Badge = _interopRequireDefault(require("./Badge"));
+
+function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+function TabBarIcon(_ref)
+
+
+
+
+
+
+
+
+{var horizontal = _ref.horizontal,badge = _ref.badge,activeOpacity = _ref.activeOpacity,inactiveOpacity = _ref.inactiveOpacity,activeTintColor = _ref.activeTintColor,inactiveTintColor = _ref.inactiveTintColor,renderIcon = _ref.renderIcon,style = _ref.style;
+  var size = 25;
+
+
+  return _react.default.createElement(require("react-native").View, {
+    style: [horizontal ? styles.iconHorizontal : styles.iconVertical, style] },
+  _react.default.createElement(require("react-native").View, {
+    style: [styles.icon, {
+      opacity: activeOpacity }] },
+
+  renderIcon({
+    focused: true,
+    size: size,
+    color: activeTintColor })),
+  _react.default.createElement(require("react-native").View, {
+    style: [styles.icon, {
+      opacity: inactiveOpacity }] },
+
+  renderIcon({
+    focused: false,
+    size: size,
+    color: inactiveTintColor })),
+  _react.default.createElement(_Badge.default, {
+    visible: badge != null,
+    style: [styles.badge, horizontal ? styles.badgeHorizontal : styles.badgeVertical],
+    size: size * 3 / 4 },
+  badge));
+}
+
+var styles = require("react-native").StyleSheet.create({
+  icon: {
+
+
+
+    position: 'absolute',
+    alignSelf: 'center',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: '100%',
+    width: '100%',
+
+    minWidth: 25 },
+
+  iconVertical: {
+    flex: 1 },
+
+  iconHorizontal: {
+    height: '100%',
+    marginTop: 3 },
+
+  badge: {
+    position: 'absolute',
+    left: 3 },
+
+  badgeVertical: {
+    top: 3 },
+
+  badgeHorizontal: {
+    top: 7 } });
